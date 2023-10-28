@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>EECS 348 Lab Seven Practice Three</h1>
+    <script>
+        function verifyPassword() {
+            // Get the password inputs
+            var password1 = document.getElementById("password1").value;
+            var password2 = document.getElementById("password2").value;
+
+            // Check if passwords are at least eight characters long and match
+            if (password1.length < 8) {
+				alert("The length of the first password is less than 8 letters!")
+			} else if (password2.length < 8) {
+				alert("The length of the second password is less than 8 letters!")
+			} else if (password1 != password2) {
+				alert("Two passwords don't match!")
+			} else {
+				alert("Everything is good!")
+			}        
+		}
+    </script>
+    <label for="password1">First Password:</label>
+    <input type="text" id="password1"><br>
+    <label for="password2">Second Password:</label>
+    <input type="text" id="password2"><br>
+    <button onclick="verifyPassword()">Validate Your Passwords</button>
+</body>
+</html>
+

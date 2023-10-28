@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .paragraph-box {
+            padding: -5px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>EECS 348 Lab Seven Practice Two</h1>
+
+    <div class="paragraph-box" id="text-paragraph">
+        <p id="dummy-text">Paragraph to be altered.</p>
+    </div>
+
+    <label for="border-r">Border R (0-255):</label>
+    <input type="text" id="border-r"><br>
+
+    <label for "border-g">Border G (0-255):</label>
+    <input type="text" id="border-g"><br>
+
+    <label for="border-b">Border B (0-255):</label>
+    <input type="text" id="border-b"><br>
+
+    <label for="border-width">Border Width:</label>
+    <input type="text" id="border-width"><br>
+
+    <label for="background-r">Background R (0-255):</label>
+    <input type="text" id="background-r"><br>
+
+    <label for="background-g">Background G (0-255):</label>
+    <input type="text" id="background-g"><br>
+
+    <label for="background-b">Background B (0-255):</label>
+    <input type="text" id="background-b"><br>
+
+    <button onclick="applyStyles()">Change the color!</button>
+
+    <script>
+        function applyStyles() {
+            var borderR = document.getElementById("border-r").value;
+            var borderG = document.getElementById("border-g").value;
+            var borderB = document.getElementById("border-b").value;
+            var borderWidth = document.getElementById("border-width").value;
+            var backgroundR = document.getElementById("background-r").value;
+            var backgroundG = document.getElementById("background-g").value;
+            var backgroundB = document.getElementById("background-b").value;
+
+            var paragraphBox = document.getElementById("text-paragraph");
+
+            // Apply background color
+            paragraphBox.style.backgroundColor = `rgb(${backgroundR}, ${backgroundG}, ${backgroundB})`;
+
+            // Apply border color
+            paragraphBox.style.borderColor = `rgb(${borderR}, ${borderG}, ${borderB})`;
+
+            // Apply border width
+            paragraphBox.style.borderWidth = borderWidth + "px";
+        }
+    </script>
+</body>
+</html>
+
